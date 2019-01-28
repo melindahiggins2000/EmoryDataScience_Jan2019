@@ -303,22 +303,22 @@ Research Compendium Example [https://github.com/ropensci/rrrpkg](https://github.
 
 ## The Big Picture {#bigpic}
 
-![](images/TheBigPic01a.PNG)
+![](images/TheBigPic01a.png)
 
 ## The Big Picture {#bigpic}
 
-![](images/TheBigPic02a.PNG)
+![](images/TheBigPic02a.png)
 
 ## The Big Picture {#bigpic}
 
-![](images/TheBigPic03a.PNG)
+![](images/TheBigPic03a.png)
 
 ## The Big Picture {#bigpic}
 
-![](images/TheBigPic04a.PNG)
+![](images/TheBigPic04a.png)
 
 ## The Big Picture {#bigpic}
 
-![](images/TheBigPic05a.PNG)
+![](images/TheBigPic05a.png)
 
 
