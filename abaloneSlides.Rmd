@@ -1,0 +1,51 @@
+---
+title: "Abalone Slides"
+author: "Melinda Higgins"
+date: "January 27, 2019"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(warnings = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(psych)
+```
+
+## Abalones
+
+For this exercise, we will be working with a dataset on abalones available from the UC Irvine Machine Learning Repository at [https://archive.ics.uci.edu/ml/datasets/abalone](https://archive.ics.uci.edu/ml/datasets/abalone). The dataset can be downloaded from the **Data Folder** and the details about the dataset can be read in the **Data Set Description**.
+
+```{r}
+abalone <- readr::read_csv(file = "abalone.csv")
+
+# abalone <- abalone %>% 
+#   filter(sex == "M")
+```
+
+## Inline Code
+
+We can computer statistics on the fly and include them in the body of the text. For example, the mean and standard deviation of the abalone whole weight is `r round(mean(abalone$wholeWeight), digits=2)`(`r round(sd(abalone$wholeWeight), digits=2)`).
+
+## Summary statistics numeric measurements
+
+```{r}
+t <- abalone %>%
+  select(-sex) %>%
+  psych::describe()
+knitr::kable(t[1:5, 1:7])
+```
+
+_...partial table shown..._
+
+## Make a scatterplot of abalone measurements
+
+```{r}
+ggplot(abalone, aes(x = wholeWeight, y = rings)) +
+  geom_point(aes(color = sex)) +
+  ggtitle("Abalone Rings by Whole Weight by Sex")
+```
